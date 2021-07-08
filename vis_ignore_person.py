@@ -2,8 +2,8 @@ import os
 import cv2
 import  xml.dom.minidom
  
-image_path      = "VOC2012/JPEGImages/"
-annotation_path = "VOC2012/Annotations/"
+image_path      = "../VOC2012/JPEGImages/"
+annotation_path = "../VOC2012/Annotations/"
 
 save_image_path = "Visualization"
 
