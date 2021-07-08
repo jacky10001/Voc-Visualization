@@ -23,7 +23,7 @@ for filename_ in files_name:
     root = dom.documentElement
     objects=dom.getElementsByTagName("object")
     for i, object in enumerate(objects):
-        cls_name = root.getElementsByTagName('name')[0].childNodes[0].data
+        cls_name = root.getElementsByTagName('name')[i].childNodes[0].data
         print(".........................................               ", cls_name)
         if cls_name not in ["person"]:
             bndbox = root.getElementsByTagName('bndbox')[i]
