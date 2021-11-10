@@ -31,10 +31,10 @@ for filename_ in files_name:
             ymin = bndbox.getElementsByTagName('ymin')[0]
             xmax = bndbox.getElementsByTagName('xmax')[0]
             ymax = bndbox.getElementsByTagName('ymax')[0]
-            xmin_data=xmin.childNodes[0].data
-            ymin_data=ymin.childNodes[0].data
-            xmax_data=xmax.childNodes[0].data
-            ymax_data=ymax.childNodes[0].data
+            xmin_data = float(xmin.childNodes[0].data)
+            ymin_data = float(ymin.childNodes[0].data)
+            xmax_data = float(xmax.childNodes[0].data)
+            ymax_data = float(ymax.childNodes[0].data)
             img = cv2.rectangle(img,(int(xmin_data),int(ymin_data)),(int(xmax_data),int(ymax_data)),(55,255,155),5)
     flag=0
     flag=cv2.imwrite(save_image_path+"/{}.jpg".format(filename),img)

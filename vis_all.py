@@ -29,10 +29,10 @@ for filename_ in files_name:
         ymin = bndbox.getElementsByTagName('ymin')[0]
         xmax = bndbox.getElementsByTagName('xmax')[0]
         ymax = bndbox.getElementsByTagName('ymax')[0]
-        xmin_data = xmin.childNodes[0].data
-        ymin_data = ymin.childNodes[0].data
-        xmax_data = xmax.childNodes[0].data
-        ymax_data = ymax.childNodes[0].data
+        xmin_data = float(xmin.childNodes[0].data)
+        ymin_data = float(ymin.childNodes[0].data)
+        xmax_data = float(xmax.childNodes[0].data)
+        ymax_data = float(ymax.childNodes[0].data)
         color = (int(np.random.randint(100,255,1)[0]), int(np.random.randint(100,255,1)[0]), int(np.random.randint(100,255,1)[0]))
         img = cv2.rectangle(img,(int(xmin_data),int(ymin_data)),(int(xmax_data),int(ymax_data)), color ,2)
         img = cv2.putText(img, cls_name, (int(xmin_data),int(ymin_data)-5), cv2.FONT_HERSHEY_SIMPLEX, 0.75, color, 2, cv2.LINE_AA)
