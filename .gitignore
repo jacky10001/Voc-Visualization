@@ -115,5 +115,7 @@ dmypy.json
 
 
 # my
-Visualization*
-non_person
+Visualization*/
+non_person/
+save/
+save*/
