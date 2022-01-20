@@ -3,7 +3,7 @@
 圈出所有物件
 
 - vis_all.py
- 
+
 圈出person相關資料
 
 - vis_person.py
